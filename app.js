@@ -97,7 +97,7 @@ conn.once('open', () => {
 
 // Create storage engine
 const storage = new GridFsStorage({
-  url: process.env.MONGODB_URI,
+  url: "mongodb+srv://ranjani:ranjani@hostman.npiob.mongodb.net/<faculty>?retryWrites=true&w=majority",
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
