@@ -330,7 +330,7 @@ app.use(courseRoutes);
 app.use(projectRoutes);
 app.use(authRoutes);
 app.use(classRoutes);
-const PORT = process.env.PORT || 2500;
+const PORT = 2500;
 
 module.exports = app.listen(PORT, () => {
   console.log(`server is running`);
