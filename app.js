@@ -59,7 +59,7 @@ app.get('/user/1/notes-new', async (req, res) => {
 
 // db config
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect("mongodb+srv://ranjani:ranjani@hostman.npiob.mongodb.net/<faculty>?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -72,7 +72,7 @@ mongoose
 //PASSPORT CONFIGURATION
 
 const store = new MongoStore({
-  uri: process.env.MONGODB_URI,
+  uri: "mongodb+srv://ranjani:ranjani@hostman.npiob.mongodb.net/<faculty>?retryWrites=true&w=majority",
   collection: "faculty",
 });
 let gfs;
@@ -80,7 +80,7 @@ let gfs;
 app.use(
   session({
     //must be declared before passport session and initialize method
-    secret: process.env.SESSION_SECRET,
+    secret: "thisisakey",
     saveUninitialized: false,
     resave: false,
     store,
