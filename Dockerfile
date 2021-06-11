@@ -10,6 +10,6 @@ WORKDIR /var/www
 
 RUN npm install
 
-EXPOSE 2500
+EXPOSE 3000
 
 ENTRYPOINT ["npm","start"]
